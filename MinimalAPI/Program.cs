@@ -22,7 +22,7 @@ app.MapPost("twillioWebhook",
             var i = command.ExecuteReaderAsync().Result;
 
         }
-    }).ContinueWith(_ => Results.Ok(validation))).WithName("EmailAction");
+    }).ContinueWith(_ => Results.Ok())).WithName("EmailAction");
 
 app.Run();
 
